@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#4e7fe7"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/myRectlayout"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/myrect"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961">
+
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/myRectlayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <Button
+                android:id="@+id/button_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/circular_percent"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/week"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/pinky"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <Button
+                android:id="@+id/button_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/circular_percent"
+                android:gravity="center"
+                android:text="@string/month"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:onClick="onClick"
+                app:backgroundTint="@color/pinky"
+                tools:ignore="TouchTargetSizeCheck" />
+            <Button
+                android:id="@+id/button_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/circular_percent"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/year"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/pinky"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart1"
+                    android:layout_width="match_parent"
+                    android:layout_height="131dp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/monthly_activitis_is_hours"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.992" />
+
+                <TextView
+                    android:layout_width="43dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="80dp"
+                    android:background="@drawable/circular_percent"
+                    android:gravity="center"
+
+                    android:id="@+id/text1"
+                    app:layout_constraintBottom_toTopOf="@+id/textView1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.13"
+                    app:layout_constraintStart_toStartOf="parent"></TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart2"
+                    android:layout_width="match_parent"
+                    android:layout_height="131dp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/new_parents"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.992" />
+
+                <TextView
+                    android:layout_width="43dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="80dp"
+                    android:background="@drawable/circular_percent"
+                    android:gravity="center"
+
+                    android:id="@+id/text2"
+                    app:layout_constraintBottom_toTopOf="@+id/textView2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.13"
+                    app:layout_constraintStart_toStartOf="parent"></TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart3"
+                    android:layout_width="match_parent"
+                    android:layout_height="131dp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/new_children"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.992" />
+
+                <TextView
+                    android:layout_width="43dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="80dp"
+                    android:background="@drawable/circular_percent"
+                    android:gravity="center"
+
+                    android:id="@+id/text3"
+                    app:layout_constraintBottom_toTopOf="@+id/textView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.13"
+                    app:layout_constraintStart_toStartOf="parent"></TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart4"
+                    android:layout_width="match_parent"
+                    android:layout_height="131dp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/total_per_category"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.992" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/gragh_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="@string/annual_trends_by_category"
+                android:textColor="#757575"
+                tools:ignore="TextContrastCheck">
+
+            </TextView>
+        </LinearLayout>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bar_chart"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1" />
+        />
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/BottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>

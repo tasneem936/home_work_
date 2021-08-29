@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">pie</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="USESRS">users</string>
+    <string name="COURSES">courses</string>
+    <string name="MORE">more</string>
+    <string name="LEADERS">leaders</string>
+    <string name="total_per_category">Total per Category</string>
+    <string name="new_children">New Children</string>
+    <string name="new_parents">New Parents</string>
+    <string name="monthly_activitis_is_hours">Monthly Activitis is Hours</string>
+    <string name="month">Month</string>
+    <string name="week">Week</string>
+    <string name="year">Year</string>
+    <string name="annual_trends_by_category">Annual Trends By Category</string>
+</resources>

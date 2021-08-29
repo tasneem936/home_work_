@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_frag"
+        android:title="Home"
+        android:icon="@drawable/home"/>
+    <item
+        android:id="@+id/users_frag"
+        android:title="Users"
+        android:icon="@drawable/user"/>
+    <item
+        android:id="@+id/leaders_frag"
+        android:title="Leaders"
+        android:icon="@drawable/leaders"/>
+    <item
+        android:id="@+id/courses_frag"
+        android:title="Courses"
+        android:icon="@drawable/courses"/>
+    <item
+        android:id="@+id/more_frag"
+        android:title="More"
+        android:icon="@drawable/more_hor"/>
+</menu>
